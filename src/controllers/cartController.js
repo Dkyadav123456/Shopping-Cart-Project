@@ -82,8 +82,8 @@ const addToCart = async function (req, res) {
     const findCartOfUser = await cartModel.findOne({ userId: userId });
 
     if (!findCartOfUser) {
+      
       /*cart creating for new user */
-
       const cartData = {
         userId: userId,
         items: [
